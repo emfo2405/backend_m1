@@ -1,5 +1,5 @@
 const express = require("express");
-const bodyParse = require("body-parser");
+const bodyParser = require("body-parser");
 const sqlite3 = require("sqlite3").verbose();
 
 //Anslutning till databas
@@ -12,3 +12,12 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+//Routing
+app.get("/", (req,res) => {
+    res.render("index");
+});
+
+//Starta applikationen
+app.listen(port, () => {
+    console.log("Application started on port " + port);
+});
