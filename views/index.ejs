@@ -14,6 +14,11 @@
             <h1>Kurslogg</h1>
 
             <form method="post">
+                <% if(error !== "") { %>
+                    <p id="error-mess">
+                        <%= error %>
+                    </p>
+                <% } %>
                 <label for="coursecode">Kurskod:</label>
                 <input type="text" id="coursecode" name="coursecode">
                 <br>
