@@ -68,7 +68,7 @@ h1 {
 
 #submit:hover {
     background-color: rgb(151, 125, 92);
-    
+    cursor: pointer;
 }
 
 footer {
@@ -77,4 +77,29 @@ footer {
     border-radius: 10px;
     text-align:center;
     font-size: 90%;
+}
+
+article {
+    border: 2px solid burlywood;
+    padding: 2%;
+    margin-bottom: 5%;
+}
+
+#course-info {
+    color: #666;
+    font-size: 90%;
+}
+
+#course-info a{
+    text-decoration: none;
+    color: #666;
+}
+
+#course-info a:hover {
+    color: #363636;
+    cursor: pointer;
+}
+
+#course {
+    font-size: 115%;
 }

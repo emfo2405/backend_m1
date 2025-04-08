@@ -19,16 +19,17 @@ app.get("/", (req,res) => {
     });
 });
 
-app.get("/member", (req, res) => {
-
-    res.render("member", {
-        memberList
-});
- });
-
  app.get("/courses", (req, res) => {
 
-    res.render("courses");
+    db.all("SELECT * FROM courses;", (err, rows) => {
+        if (err) {
+            console.error(err.message);
+        }
+    res.render("courses", {
+        error: "",
+        rows: rows
+    });
+    });
  });
 
  app.get("/about", (req, res) => {
