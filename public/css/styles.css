@@ -31,3 +31,50 @@ input[type=text] {
     padding: 1%;
     width: 90%;
 }
+
+.navbar a{
+    text-decoration: none;
+    color: black;
+    padding: 2.8%;
+}
+
+
+
+.navbar {
+    background-color: burlywood;
+    width: 97%;
+    text-align: center;
+    padding: 2%;
+    border-radius: 5px;
+    margin-bottom: 7%;
+}
+
+.navbar a:hover {
+    background-color: rgb(151, 125, 92);
+}
+
+h1 {
+    text-align: center;
+}
+
+#submit {
+    background-color: burlywood;
+    padding: 2%;
+    border: solid 2px rgb(151, 125, 92);
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-left: 42%;
+}
+
+#submit:hover {
+    background-color: rgb(151, 125, 92);
+    
+}
+
+footer {
+    background-color: burlywood;
+    margin-top: 30px;
+    border-radius: 10px;
+    text-align:center;
+    font-size: 90%;
+}
