@@ -15,23 +15,30 @@
 
             <div class="navbar">
                 <a href="/">Startsida</a>
-                <a href="/courses">Kurser</a>
+                <a href="/courses">Lägg till kurs</a>
                 <a href="/about">Om uppgiften</a>
               </div>
 
-<h2>Lästa kurser</h2>
-<% if(locals.rows.length > 0) { %>
-    <% locals.rows.forEach((course) => { %>
-        <article>
-            <p id="course"><%= course.coursecode %> <%= course.coursename %></p>
-            <p id="course-info"><a href=""<%= course.syllabus %>>Kursplan</a>, progression: <%= course.progression %></p>
-            <p>
-                <a id="delete" href="/delete/<%= course.id %>">Radera kurs</a>
-            </p>
-        </article>
-        <% }); %>
-<% } %>
-
+            <form method="post">
+                <% if(error !== "") { %>
+                    <p id="error-mess">
+                        <%= error %>
+                    </p>
+                <% } %>
+                <label for="coursecode">Kurskod:</label>
+                <input type="text" id="coursecode" name="coursecode">
+                <br>
+                <label for="coursename">Kursnamn:</label>
+                <input type="text" id="coursename" name="coursename">
+                <br>
+                <label for="syllabus">Kursplan:</label>
+                <input type="text" id="syllabus" name="syllabus">
+                <br>
+                <label for="progression">Progression:</label>
+                <input type="text" id="progression" name="progression">
+                <br>
+                <input id="submit" type="submit" value="Lägg till kurs">
+            </form>
     <footer>
         Moment 1<br>
         emfo2405

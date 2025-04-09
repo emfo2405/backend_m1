@@ -13,19 +13,19 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //Routing
-app.get("/", (req,res) => {
-    res.render("index", {
+app.get("/courses", (req,res) => {
+    res.render("courses", {
         error: ""
     });
 });
 
- app.get("/courses", (req, res) => {
+ app.get("/", (req, res) => {
 
     db.all("SELECT * FROM courses;", (err, rows) => {
         if (err) {
             console.error(err.message);
         }
-    res.render("courses", {
+    res.render("index", {
         error: "",
         rows: rows
     });
@@ -38,7 +38,7 @@ app.get("/", (req,res) => {
  });
 
 //Skapa ny kurs
-app.post("/", (req,res) => {
+app.post("/courses", (req,res) => {
     let coursecode = req.body.coursecode;
     let coursename = req.body.coursename;
     let syllabus = req.body.syllabus;
@@ -55,7 +55,7 @@ app.post("/", (req,res) => {
         error = "Kontrollera att alla fält är korrekt ifyllda";
     }
 
-    res.render("index", {
+    res.render("courses", {
         error: error
     });
 
@@ -68,7 +68,7 @@ app.get("/delete/:id", (req, res) => {
         if (err) {
             console.error(err.message);
         }
-        res.redirect("/courses");
+        res.redirect("/");
     });
 });
 
