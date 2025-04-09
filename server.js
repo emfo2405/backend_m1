@@ -61,6 +61,17 @@ app.post("/", (req,res) => {
 
 });
 
+app.get("/delete/:id", (req, res) => {
+    let id = req.params.id;
+
+    db.run("DELETE FROM courses WHERE id=?;", id, (err) => {
+        if (err) {
+            console.error(err.message);
+        }
+        res.redirect("/courses");
+    });
+});
+
 //Starta applikationen
 app.listen(port, () => {
     console.log("Application started on port " + port);

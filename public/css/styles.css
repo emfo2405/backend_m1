@@ -103,3 +103,16 @@ article {
 #course {
     font-size: 115%;
 }
+
+#delete {
+    text-decoration: none;
+    color: rgb(133, 1, 1);
+    font-weight: bold;
+    font-size: 90%;
+    border: solid 2px rgb(133, 1, 1);
+    padding: 1%;
+}
+
+#delete:hover {
+    background-color: rgb(206, 157, 157);
+}
