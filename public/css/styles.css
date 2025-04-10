@@ -116,3 +116,11 @@ article {
 #delete:hover {
     background-color: rgb(206, 157, 157);
 }
+
+#about-info {
+    width: 80%;
+    margin-left: 10%;
+    border: solid 1px rgb(151, 125, 92);
+    box-shadow: 0 0 5px rgb(151, 125, 92);
+    padding: 2%;
+}
