@@ -23,7 +23,7 @@
 <% if(locals.rows.length > 0) { %>
     <% locals.rows.forEach((course) => { %>
         <article>
-            <p id="course"><%= course.coursecode %> <%= course.coursename %></p>
+            <p id="course"><%= course.coursecode %>, <%= course.coursename %></p>
             <p id="course-info"><a href=""<%= course.syllabus %>>Kursplan</a>, progression: <%= course.progression %></p>
             <p>
                 <a id="delete" href="/delete/<%= course.id %>">Radera kurs</a>

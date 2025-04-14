@@ -61,6 +61,7 @@ app.post("/courses", (req,res) => {
 
 });
 
+//Radera en kurs
 app.get("/delete/:id", (req, res) => {
     let id = req.params.id;
 
